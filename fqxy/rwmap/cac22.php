@@ -33,7 +33,14 @@ $rw5=($iniFile->getCategory('任务分类'));
 $rw6=($iniFile->getCategory('任务名字'));
 
 
-include("./rwmap/cac22_ts.php");//任务提示	
+include(XY_DIR . "/rwmap/cac22_ts.php");//任务提示
+
+$rwstr=$rwidd."_".$rwfl;
+$rid=$rw2[$rwstr];
+// 任务与杨中顺无关，不做任何操作
+if ($rid < 47 || $rid > 58) {
+    $m = 0;
+}
 
 if ($m==1) {
 	
@@ -58,10 +65,11 @@ echo "<a href='xy.php?uid=$wjid&&cmd=$cmid&&sid=$a1'><font color=blue>杨中顺�
 ////////////////////任务属性//////////////
 $rwidd=1;//任务的id
 $rwfl=2;//任务的分类1主线2支线5日常4活动
+$rwmz="159转职任务〖关键〗";
 include XY_DIR . "/rwmap/rwpd.php";
 
 $rwstr=$rwidd."_".$rwfl;
-$rid=$rw2[$rwstr];
+$rid=$rw2[$rwstr] ?? 0;
 if ($rid == 52) {
     $strr1=$rwidd."_".$rwfl."_".$npcc;
     show_image('ts/ts1.png');

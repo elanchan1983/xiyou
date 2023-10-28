@@ -814,7 +814,7 @@ if ($npcc==1) {
 
 
 } elseif ($npcc==42) {
-//cmd及超链接值
+    //cmd及超链接值
 	$cmid=$cmid+1;
 	$cdid[]=$cmid;
 	$clj[]=10;
@@ -928,15 +928,8 @@ if ($npcc==1) {
 } elseif ($npcc==47) {
 	$npcname="【九天居】";
 	$npctake="【九天居】设计中";
-	echo "<font color=red>$npcname</font>"."<br>";
-	echo "<font color=black>$npctake</font>"."<br>";
-//cmd及超链接值
-	$cmid=$cmid+1;
-	$cdid[]=$cmid;
-	$clj[]=10;
-	$npc[]=0;
-//echo "<a href='xy.php?uid=$wjid&&cmd=$cmid&&sid=$a1'><font color=blue>攻击$npcname</font></a>"."<br>";
-//
+	//echo "<font color=red>$npcname</font>"."<br>";
+	//echo "<font color=black>$npctake</font>"."<br>";
 
 
 
@@ -1232,7 +1225,7 @@ echo "<a href='xy.php?uid=$wjid&&cmd=$cmid&&sid=$a1'><font color=blue>转门派<
 	$cmid=$cmid+1;
 	$cdid[]=$cmid;
 	$clj[]=10;
-	$npc[]=0;
+	$npc[]=62;
 	echo "<a href='xy.php?uid=$wjid&&cmd=$cmid&&sid=$a1'><font color=blue>攻击$npcname</font></a>"."<br>";
 
 	echo "<font color=black>$npctake</font>"."<br>";
@@ -3280,7 +3273,7 @@ echo "<a href='xy.php?uid=$wjid&&cmd=$cmid&&sid=$a1'><font color=blue>【我要�
 		include("wj/ztt.php");
 		include("wj/zfzt.php");
 		include("./ini/zt_ini.php");
-		$iniFile->updItem('玩家信息', ['红' => $wjxx1['血']]);
+		$iniFile->updItem('玩家信息', ['红' => $wjxx1['血'], '蓝' => $wjxx1['蓝']]);
 		echo "<font color=black>你花了500两银子，往床上一躺，睡了一会，只觉精力充沛！	</font>"."<br>";
 	} else{
 		echo "<font color=black>对不起！休息需要500银两哦！</font>"."<br>";
@@ -5607,15 +5600,8 @@ echo "<a href='xy.php?uid=$wjid&&cmd=$cmid&&sid=$a1'><font color=blue>【我要�
 } elseif ($npcc==260) {
 	$npcname="【三生三世】";
 	$npctake="【三生三世】设计中";
-	echo "<font color=red>$npcname</font>"."<br>";
-	echo "<font color=black>$npctake</font>"."<br>";
-//cmd及超链接值
-	$cmid=$cmid+1;
-	$cdid[]=$cmid;
-	$clj[]=10;
-	$npc[]=0;
-//echo "<a href='xy.php?uid=$wjid&&cmd=$cmid&&sid=$a1'><font color=blue>攻击$npcname</font></a>"."<br>";
-//
+	//echo "<font color=red>$npcname</font>"."<br>";
+	//echo "<font color=black>$npctake</font>"."<br>";
 
 
 
@@ -13004,7 +12990,7 @@ echo "<a href='xy.php?uid=$wjid&&cmd=$cmid&&sid=$a1'><font color=blue>领取练�
 
 } else {
 
-	$npcsz = include XY_DIR . '/npc/npcsz.php';
+	$npcsz = include XY_DIR . '/data/npc.php';
 	$npcxx = [];
 	foreach ($npcsz as $v) {
 		if ($npcc == $v['id']) {

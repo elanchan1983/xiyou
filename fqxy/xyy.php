@@ -11,6 +11,7 @@
 <div style='width: device-width;display:block;word-break: break-all;word-wrap: break-word;'>
     <?php
     include_once __DIR__ . '/../includes/constants.php';
+    include_once ROOT . '/includes/functions.php';
     include_once XY_DIR . '/class/iniclass.php';
     include XY_DIR . '/sql/mysql.php';
     date_default_timezone_set("PRC");
@@ -56,7 +57,7 @@
         include XY_DIR . '/ini/xuser_ini.php';
         $a10 = ($iniFile->getItem('验证信息', '玩家游戏码'));
         $img = 'pic/login/1.jpg';
-        echo '<img src="' . $img . ' "alt="图片"/〉';
+        echo '<img src="' . $img . ' "alt="图片"/>';
         echo "<br>";
         echo "<br>";
         echo "<br>";
